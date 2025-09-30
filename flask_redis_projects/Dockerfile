@@ -9,9 +9,9 @@
     libmariadb-dev \
     pkg-config
 
-   COPY . . 
+   COPY requirements.txt .
 
-   RUN pip install flask redis
+   RUN pip install --no-cache-dir -r requirements.txt
 
    # Stage 2: Production Stage
 

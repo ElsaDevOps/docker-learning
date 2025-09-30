@@ -1,0 +1,23 @@
+version: '3.8'
+
+services:
+  flask-app:
+    build:
+      context: .
+    ports:
+      - "5002:5002" # Map Flask app to localhost:5002
+    depends_on:
+      - redis
+    networks:
+      - app-network
+
+  redis:
+    image: "redis:alpine" # Use the official Redis image
+    ports:
+      - "6379:6379" # Map Redis to localhost:6379
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge
