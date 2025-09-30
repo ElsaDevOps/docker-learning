@@ -1,7 +1,4 @@
-
-
-
-   # Stage 1: Build Stage
+# Stage 1: Build Stage
    FROM python:3.8-slim as Build
 
    WORKDIR /app
@@ -14,7 +11,7 @@
 
    COPY . . 
 
-   RUN pip install flask mysqlclient
+   RUN pip install flask redis
 
    # Stage 2: Production Stage
 
@@ -24,8 +21,6 @@
 
    COPY --from=Build /app /app
 
-   EXPOSE 5000
+   EXPOSE 5002
 
    CMD ["python", "app.py"] 
-
-
