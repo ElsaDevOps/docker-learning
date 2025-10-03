@@ -1,7 +1,9 @@
-# Stage 1: Build Stage
-   FROM python:3.8-slim as Build
+
+   FROM python:3.8-slim 
 
    WORKDIR /app
+
+   COPY requirements.txt . 
 
    RUN apt-get update && apt-get install -y \
     gcc \
@@ -9,17 +11,11 @@
     libmariadb-dev \
     pkg-config
 
-   COPY requirements.txt .
-
    RUN pip install --no-cache-dir -r requirements.txt
 
-   # Stage 2: Production Stage
+  
+   COPY . .
 
-   FROM python:3.8-slim
-
-   WORKDIR /app
-
-   COPY --from=Build /app /app
 
    EXPOSE 5002
 
