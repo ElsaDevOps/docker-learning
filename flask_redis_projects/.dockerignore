@@ -1,0 +1,21 @@
+# Ignore Git and Docker artifacts
+.git
+.gitignore
+Dockerfile
+docker-compose.yml
+.dockerignore
+README.md
+
+# Ignore IDE and OS files
+.vscode/
+.idea/
+.DS_Store
+
+# Ignore Python artifacts that shouldn't be in the final image
+__pycache__/
+*.pyc
+venv/
+env/
+
+# Exclude the entire frontend project from the backend's build context
+my-react-frontend/
