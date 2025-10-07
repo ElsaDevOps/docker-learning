@@ -18,6 +18,21 @@ except redis.exceptions.ConnectionError as e:
     print(f"Could not connect to Redis: {e}")
     r = None
 
+
+  
+CORS(app) 
+r = redis.Redis(...)
+
+
+@app.route("/")
+def index():
+    return jsonify({
+        "status": "online",
+        "message": "Visitor Analytics API is running.",
+        "endpoints": ["/api/visitors"]
+    })
+  
+
 @app.route("/api/visitors", methods=['GET', 'POST'])
 def handle_visitors():
     if not r:
