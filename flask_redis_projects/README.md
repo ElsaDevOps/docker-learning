@@ -73,7 +73,6 @@ To get a local copy up and running, follow these simple steps.
 
 5.  **View the application:**
     *   The backend API is available at `http://localhost:5002`
-    *   The visitor information is available at `http://127.0.0.1:5002/api/visitors`
     *   The frontend application is running at `http://localhost:5173`
 
 ---
