@@ -2,14 +2,12 @@
 templates
 savethis.txt
 
-# System / IDE files
-# ------------------
+
 .DS_Store
 .vscode/
 .idea/
 
-# Python artifacts
-# ----------------
+
 __pycache__/
 *.pyc
 *.pyo
@@ -20,19 +18,16 @@ venv/
 *.egg-info/
 pip-selfcheck.json
 
-# Docker - Don't commit local Docker data volumes
-# ------------------------------------------------
+
 redis-data/
 
-# Node.js / Frontend artifacts (specific to your subfolder)
-# --------------------------------------------------------
+
 my-react-frontend/node_modules
 my-react-frontend/dist
 my-react-frontend/.vite
 npm-debug.log
 yarn-error.log
 
-# Secrets - CRITICAL for security
-# -------------------------------
+
 .env
 *.env.local
