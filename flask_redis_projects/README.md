@@ -1,4 +1,4 @@
-# Flask Mult-Containter Application using Redis database
+# Flask Multi-Containter Application using Redis database
 
 ---
 
